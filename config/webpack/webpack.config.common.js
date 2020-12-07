@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const paths = require('../paths')
+const { resolve } = require('path');
 const  MiniCssExtractPlugin  = require('mini-css-extract-plugin');
 const Mode=process.env.NODE_ENV.trim();
 const devMode= Mode ==='development' ? true:false;
@@ -8,6 +9,9 @@ const tsImportPluginFactory = require('./ts-import-plugin');
 module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
+    alias: {
+      '@': resolve(__dirname, '../../src')
+    },
   },
   devtool: "source-map",
   module: {
@@ -103,7 +107,6 @@ module.exports = {
     // 创建一个在内存中生成的html插件
     new HtmlWebpackPlugin({
       title: "Lunchbox Demo",
-
       template: paths.appHtml,
       inject: true,
     }),

@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
-
+import { Layout } from 'antd';
+import Header from '@/widgets/Header';
+const { Content } = Layout;
 class Home extends Component {
     render() {
         return (
-            <div>
-                
-            </div>
+            <Layout>
+                <Header/>
+                <Content></Content>
+            </Layout>
         )
     }
 }
