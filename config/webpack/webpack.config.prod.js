@@ -1,5 +1,5 @@
 const merge = require('webpack-merge')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 const paths = require('../paths')
@@ -27,9 +27,10 @@ module.exports = merge.smart(commonConfig, {
     },
   },
   plugins: [
-    // 每次编译之前，清空上一次编译的文件
-    new CleanWebpackPlugin([paths.appBuild], {
-      root: process.cwd()
-    }),
-  ],
+    new HtmlWebpackPlugin({
+      title: "Lunchbox Demo",
+      template: paths.appHtml,
+      inject: true,
+    })
+ ]
 })
