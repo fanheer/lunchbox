@@ -3,7 +3,7 @@ import { RouteComponentProps } from "react-router-dom";
 
 export default interface IRouterProps {
     path: string;
-    title: string;
+    title?: string;
     component: ComponentClass<any, any> | FunctionComponent<any> | ComponentClass<RouteComponentProps<any, any, unknown>, any> | FunctionComponent | undefined;
     exact?: boolean;
 }

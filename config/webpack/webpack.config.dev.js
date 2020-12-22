@@ -9,6 +9,7 @@ module.exports = merge.smart(commonConfig, {
   entry: paths.appIndex,
   output: {
     filename: 'static/js/[name]-bundle-[hash:8].js',
+    publicPath: '/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

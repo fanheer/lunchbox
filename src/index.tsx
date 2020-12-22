@@ -1,9 +1,9 @@
-import Home from '@/pages/home'
+import Base from '@/pages/base'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 
 ReactDOM.render(
-  <Home />,
+  <Base />,
   document.getElementById('root'),
 )
