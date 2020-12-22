@@ -1,24 +1,23 @@
-import React from 'react'
-import Login from '@/pages/login';
-import Home from '@/pages/home';
+import React, { lazy } from 'react'
 import IRouterProps from '@/common/interfaces/router';
 import Router from '@/widgets/Router';
-export const routerMap: IRouterProps[] = [
-  // {
-  //   path: "/",
-  //   component: Home,
-  // },
+import { AsyncLoad } from '@/common/function/lazyload';
+
+const Login = lazy(() => import(/* webpackChunkName: "Login" */'@/pages/login'));
+const Home = lazy(() => import(/* webpackChunkName: "Home" */'@/pages/home/route'));
+
+const routerMap: IRouterProps[] = [
   {
     path: "/home",
-    component: Home,
+    component: AsyncLoad(Home),
   },
   {
     path: "/login",
-    component: Login,
+    component: AsyncLoad(Login),
   },
 ];
-export const redirectFrom: string = "/";
-export const defaultRouter: string = "/home";
+const redirectFrom: string = "/";
+const defaultRouter: string = "/home";
 export default function base() {
   return (
     <Router

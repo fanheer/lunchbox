@@ -1,3 +1,6 @@
+/**
+ * 测试mask效果
+ */
 import React, { useEffect } from "react";
 import "./index.less";
 export default function NewLead() {
@@ -30,10 +33,10 @@ export default function NewLead() {
       setTimeout(() => {
         arry.forEach((d, i) => {
           if (i == index) return;
-          d.style.opacity = "0.1";
+          d.style.opacity = "0";
         });
-      }, 1000);
-    }, 2000);
+      }, 2000);
+    }, 4000);
   }
   return (
     <div>

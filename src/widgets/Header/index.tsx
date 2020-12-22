@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Layout, Menu } from 'antd'
 import IRouterProps from '@/common/interfaces/router';
 import { useHistory, withRouter, RouteComponentProps } from 'react-router-dom';
+import './index.less'
+
 const { Header } = Layout;
 interface IProps{
   menuProps: IRouterProps[];
@@ -15,7 +17,7 @@ const LayoutHeader = (props: IProps) => {
     };
     return (
       <Header>
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[defaultMenu]}>
+        <Menu className="header" theme="light" mode="horizontal" defaultSelectedKeys={[defaultMenu]}>
           {menuProps.map((menu, index) => {
             if (menu.title)
               return (

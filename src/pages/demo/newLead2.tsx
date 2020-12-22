@@ -1,13 +1,19 @@
+/**
+ * 测试mask效果
+ */
 import React, { useEffect } from "react";
 import "./index.less";
 export default function NewLead() {
-    useEffect(() => {
-      let i = 0;
-      // setInterval(() => {
-      //   renderContent(["one", "two", "three", "four"][i]);
-      //   if (++i >= 4) i = 0;
-      // }, 1000);
-    }, [])
+  useEffect(() => {
+    // test()
+  }, []);
+  const test = () => {
+    let i = 0;
+    setInterval(() => {
+      renderContent(["one", "two", "three", "four"][i]);
+      if (++i >= 4) i = 0;
+    }, 1000);
+  };
   function renderContent(cls: string) {
     let targetNode = document.querySelector(`.${cls}`);
     let maskContent = document.getElementById("maskContent");
