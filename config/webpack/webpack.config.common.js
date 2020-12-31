@@ -94,7 +94,7 @@ module.exports = {
               name: devMode ? "[name].[ext]" : "[name]-[hash:5].min.[ext]",
               limit: 20000, // size <= 20KB
               //图片访问路径
-              publicPath: devMode ? "./images/" : "./static/images",
+              publicPath: devMode ? "../static/images/" : "./static/images",
               //图片输出位置
               outputPath: "static/images/",
             },

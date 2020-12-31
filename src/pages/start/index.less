@@ -1,0 +1,60 @@
+.start {
+    height: 100%;
+    position: relative;
+}
+.img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.title{
+  position: fixed;
+  left: 30%;
+  bottom: 30%;
+  font-size: 60px;
+  color: #eaecf3;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #46311f;
+}
+.left_line {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 5px;
+  height: 0;
+  animation: lineAnimation 5s;
+}
+@keyframes lineAnimation {
+  0% {
+      height: 0;
+      left: 40%;
+      width: 5px;
+      background-color:#b79774;
+  }
+  33% {
+      height: 100%;
+      left: 40%;
+      width: 5px;
+      background-color:#b79774;
+  }
+  66% {
+      height: 100%;
+      left: 40%;
+      width: 100%;
+      background-color:#b79774;
+  }
+  100% {
+      height: 100%;
+      width: 100%;
+      left: 100%;
+      background-color:#b79774;
+  }
+}

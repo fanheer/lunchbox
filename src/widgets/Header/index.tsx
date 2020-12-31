@@ -16,8 +16,8 @@ const LayoutHeader = (props: IProps) => {
       history.push(value.path);
     };
     return (
-      <Header>
-        <Menu className="header" theme="light" mode="horizontal" defaultSelectedKeys={[defaultMenu]}>
+      <Header className="header">
+        <Menu className="header-menu" theme="light" mode="horizontal" defaultSelectedKeys={[defaultMenu]}>
           {menuProps.map((menu, index) => {
             if (menu.title)
               return (
