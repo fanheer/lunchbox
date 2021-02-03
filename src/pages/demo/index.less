@@ -47,3 +47,28 @@
   display: inline-block;
   background-color: #fff;
 }
+.test{
+  background-color: black;
+  width: 800px;
+  height: 500px;
+  position: relative;
+  .content{
+      position: absolute;
+      height: 300px;
+      width: 500px;
+      bottom: 0;
+      left: 204px;
+      right: 70px;
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
+      border: unset;
+      color: #fff;
+      padding: 32px 50px;
+      background: radial-gradient(100% 100% at 100% 0,rgba(152,199,255,.4) 0,rgba(135,167,205,0) 100%);
+      -webkit-backdrop-filter: blur(64px);
+      backdrop-filter: blur(64px);
+      background-size: cover;
+      border: 10px solid;
+      border-image: url("/src/static/images/test.png") 200 300 ;
+  }
+}

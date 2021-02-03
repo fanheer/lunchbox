@@ -11,7 +11,8 @@ export default function Start(props: IProps) {
         <img src={buildings} className="img" />
         <div className="bg"></div>
         <div className="left_line"></div>
-        <div className="title">Fanheer's</div>
+        <div className="title">饭盒</div>
+        <div className="subtitle">Fanheer</div>
       </div>
     );
 }
