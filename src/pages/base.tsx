@@ -22,7 +22,7 @@ const routerMap: IRouterProps[] = [
   },
 ];
 const redirectFrom: string = "/";
-const defaultRouter: string = "/start";
+const defaultRouter: string = "/home";
 export default function base() {
   return (
     <Router

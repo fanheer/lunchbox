@@ -22,7 +22,7 @@ export const routerMap: IRouterProps[] = [
 ];
 export default function home() {
   const redirectFrom: string = "/home";
-  const redirectTo: string = "/home/index";
+  const redirectTo: string = "/home/newlead";
   const currentRouter: string =
     useLocation().pathname === redirectFrom
       ? redirectTo
