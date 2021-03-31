@@ -6,6 +6,7 @@ import { AsyncLoad } from '@/common/function/lazyload';
 const Login = lazy(() => import(/* webpackChunkName: "Login" */'@/pages/login'));
 const Home = lazy(() => import(/* webpackChunkName: "Home" */'@/pages/home/route'));
 const Start = lazy(() => import(/* webpackChunkName: "Home" */'@/pages/start'));
+const AppList = lazy(() => import(/* webpackChunkName: "Home" */'@/pages/appList'));
 
 const routerMap: IRouterProps[] = [
   {
@@ -17,12 +18,16 @@ const routerMap: IRouterProps[] = [
     component: AsyncLoad(Start),
   },
   {
+    path: "/applist",
+    component: AsyncLoad(AppList),
+  },
+  {
     path: "/login",
     component: AsyncLoad(Login),
   },
 ];
 const redirectFrom: string = "/";
-const defaultRouter: string = "/home";
+const defaultRouter: string = "/applist";
 export default function base() {
   return (
     <Router
