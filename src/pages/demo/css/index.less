@@ -5,3 +5,33 @@
   border: 1px solid red;
   flex: 1;
 }
+
+.transdiv{
+  margin: 200px;
+  border: 1px solid;
+  width: 500px;
+  height: 500px;
+  
+  .opitem{
+    width: 250px;
+    height: 400px;
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    &-active{
+      display: block;
+    }
+  }
+
+  .opitem-enter{
+    opacity: 1;
+  }
+  .opitem-enter-active{
+    transition: opacity 3s;
+  }
+  .opitem-leave-to{
+    opacity: 0;
+  }
+  .opitem-leave-active{
+    transition: opacity 3s;
+  }
+}

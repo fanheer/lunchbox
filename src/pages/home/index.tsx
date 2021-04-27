@@ -8,7 +8,7 @@ export default function index() {
       <div className="homepage">
         <div className="title">Fanheer's</div>
         <img className="photo" src={myphoto} />
-        {showStart && <Start clickStart={() => setShowStart(false)} />}
+        { showStart && <Start clickStart={() => setShowStart(false)} />}
       </div>
     );
 }

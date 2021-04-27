@@ -5,6 +5,8 @@ const NewLead2 = lazy(() => import(/* webpackChunkName: "newLead2" */'@/pages/de
 const Testapi = lazy(() => import(/* webpackChunkName: "Testapi" */'@/pages/demo/testapi'));
 const Test = lazy(() => import(/* webpackChunkName: "Test" */'@/pages/demo/css/3divs'));
 const FlexTest = lazy(() => import(/* webpackChunkName: "Test" */'@/pages/demo/css/flex1'));
+const TransTest = lazy(() => import(/* webpackChunkName: "Test" */'@/pages/demo/css/transition1'));
+const Hooks = lazy(() => import(/* webpackChunkName: "hooks" */'@/pages/demo/hooks'));
 
 export default function index() {
     return (
@@ -18,9 +20,11 @@ export default function index() {
                     111
                 </div>
             </div> 
+             <TransTest />
             <Test />*/}
             
-            <FlexTest />
+           <Hooks/>
+            
         </div>
     )
 }
