@@ -2,7 +2,7 @@
  * 测试mask效果
  */
 import React, { useEffect } from "react";
-import "./index.less";
+import "./index.scss";
 export default function NewLead() {
   useEffect(() => {
     // test()

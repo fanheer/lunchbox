@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import "./index.less";
+import "./index.scss";
 export default function hooks() {
     const [count, setCount] = useState(0)
         
